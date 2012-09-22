@@ -1,10 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import re
+import sys
 
-file = open('/Users/phae_girl/Documents/Development/Ruby/reflinks.md', 'r')
-content = file.read()
-file.close()
+content = sys.stdin.read()
 
 newLinks = []
 newRefs = []
@@ -90,25 +89,6 @@ content += '\n\n\n'
 for item in newRefs:
 	content += '[' + item[0] + ']: ' + item[1] + '\n' 
 	
-	
-
-#Testing stuff! 
-for item in newLinks:
-	print item
-print '\n'
-print '************'
-print '\n'
-for item in newRefs:
-	print item
-	
-print '\n'
-print '************'
-print '\n'
-
 print content
-
-print '\n'
-print '************'
-print '\n'
 
 			
